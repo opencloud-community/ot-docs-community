@@ -11,7 +11,10 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "update-docs-map": "node scripts/fetch-official-docs-structure.js",
+    "fix-docs-map": "node scripts/manual-fix.js",
+    "update-all": "npm run update-docs-map && npm run fix-docs-map"
   },
   "dependencies": {
     "@docusaurus/core": "^3.0.0",
@@ -36,5 +39,8 @@
   },
   "engines": {
     "node": ">=16.14"
+  },
+  "devDependencies": {
+    "xml2js": "^0.6.2"
   }
 }
