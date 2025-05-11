@@ -41,6 +41,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/opencloud-community/ot-docs-community/tree/main/',
+          // Set docs as the root route
+          routeBasePath: '/',
         },
         blog: false, // Blog feature disabled
         theme: {
