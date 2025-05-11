@@ -1,0 +1,8 @@
+{
+  "label": "Backup & Restore",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Procedures for backing up and restoring your OpenTalk instance"
+  }
+}
