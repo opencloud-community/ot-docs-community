@@ -109,6 +109,11 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 apt update
 apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
+# Start Docker socket first, then the service
+# This is important to avoid the "no sockets found via socket activation" error
+systemctl start docker.socket
+systemctl start docker.service
+
 # Verify installation
 docker --version
 docker compose version
